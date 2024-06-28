@@ -1,6 +1,7 @@
-const Button = ()=>{
+const Button = ({ titulo, type, evento, className = "btn btn-primary" }) => {
 
-    return(
-        <button></button>
+    return (
+        <button className={className} type={type} onClick={evento}>{titulo}</button>
     )
 }
+export default Button
