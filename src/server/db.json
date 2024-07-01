@@ -1,11 +1,21 @@
 {
     "users": [
-      { "id": 1, "name": "John Doe", "email": "john@example.com" },
-      { "id": 2, "name": "Jane Smith", "email": "jane@example.com" }
-    ],
-    "productos":[
         {
-            "nombre":"Rosa",
+            "id": 1,
+            "name": "John Doe",
+            "email": "john@example.com"
+        },
+        {
+            "id": 2,
+            "name": "Jane Smith",
+            "email": "jane@example.com",
+            "password": "123"
+        }
+    ],
+    "productos": [
+        {
+            "id": 1,
+            "nombre": "Rosa",
             "precio": 1200
         }
     ]

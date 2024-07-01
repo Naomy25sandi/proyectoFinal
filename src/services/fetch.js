@@ -1,7 +1,7 @@
 //get
  export async function getUsuarios() {
     try {
-      let response = await fetch('http://localhost:3001/api/task',{
+      let response = await fetch('http://localhost:3001/users',{
         method: "GET",
         mode: "cors",
         credentials: "same-origin",
@@ -39,7 +39,7 @@
  export async function postData(usuario, correo, contra) {
     try {
     
-      let response = await fetch ('http://localhost:3001/api/task',{
+      let response = await fetch ('http://localhost:3001/users',{
         method: "POST",
           headers: {
             "Content-type": "application/json"
