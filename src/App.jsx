@@ -10,6 +10,7 @@ function App() {
 
   return (
     <>
+     
       <BrowserRouter>
         <RutasPaginas />
       </BrowserRouter>

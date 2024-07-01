@@ -34,12 +34,13 @@ const Login = () => {
 
     return (
         <>
+             
             <h1>Iniciar Sesión</h1>
-            <input type="text" value={usuario} placeholder="Nombre" onChange={(e) => setUsuario(e.target.value)} />
             <input type="email" value={correo} placeholder="Correo" onChange={(e) => setCorreo(e.target.value)} />
             <input type="password" value={contra} placeholder="contraseña" onChange={(e) => setContra(e.target.value)} />
 
             <Button titulo={"Iniciar Sesión"} type={"button"} className={"btn btn-success"} evento={login} />
+            <li>No tienes cuenta?</li> <a href=""></a>
         </>
     )
 
