@@ -45,7 +45,7 @@ export async function postData(obj) {
       },
       body: JSON.stringify(obj)
     })
-    const data = response.json()
+    const data = await response.json()
     console.log(data);
     return data
   } catch (error) {

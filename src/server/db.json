@@ -1,22 +1,58 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "name": "John Doe",
-            "email": "john@example.com"
-        },
-        {
-            "id": 2,
-            "name": "Jane Smith",
-            "email": "jane@example.com",
-            "password": "123"
-        }
-    ],
-    "productos": [
-        {
-            "id": 1,
-            "nombre": "Rosa",
-            "precio": 1200
-        }
-    ]
+  "users": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "email": "john@example.com"
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "email": "jane@example.com",
+      "password": "123"
+    },
+    {
+      "id": "20b4",
+      "name": "AA",
+      "email": "AAAA",
+      "password": "AAA"
+    },
+    {
+      "id": "6431",
+      "name": "bbb",
+      "email": "bbbb",
+      "password": "bbb"
+    },
+    {
+      "id": "cd28",
+      "name": "bbbbb",
+      "email": "bbbb",
+      "password": "bbbb"
+    },
+    {
+      "id": "c863",
+      "name": "Naomy",
+      "email": "n@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "1087",
+      "name": "Naomyh",
+      "email": "n@gmailb.com",
+      "password": "123b456"
+    },
+    {
+      "id": "1d23",
+      "name": "vnv",
+      "email": "nvnnv",
+      "password": "nvnv"
+    }
+  ],
+  "productos": [
+    {
+      "id": "1",
+      "nombre": "Rosa",
+      "precio": 1200
+    }
+  ]
 }
