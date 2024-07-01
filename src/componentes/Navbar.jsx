@@ -1,12 +1,13 @@
 import React from 'react'
 import Button from './Button'
 
+
 const Navbar = () => {
   return (
     <div className='fondoPag'>
     <header class="header">
         <div class="logo">
-           <img src='assets/logo.jpeg'/>
+           <img src='src\assets\logo.jpeg'/>
         </div>
         <nav>
             <ul class="nav-links">
