@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import './App.css'
-import Login from './componentes/Login'
+import Login from './paginas/InicioSesion'
 import { BrowserRouter } from 'react-router-dom'
 import RutasPaginas from './routes/Rutaspaginas'
 
@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-     
+
       <BrowserRouter>
         <RutasPaginas />
       </BrowserRouter>
