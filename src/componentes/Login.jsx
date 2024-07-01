@@ -17,8 +17,15 @@ const Login = () => {
             const datos_server = await getUsuarios()
             setData(datos_server)
         }
-        datos()
-        console.log("vamos aqui", data)
+        datos();
+
+        function validar() {
+            if (!correo || correo.trim()==="" || !contra || contra.trim() === "") {
+                alert ("Llene espacios vacios")
+                return false;
+            }
+        } return true;
+      
         if (data) {
             const user = data.find((user) => user.email === correo);
             console.log("datos filtrados", user)
