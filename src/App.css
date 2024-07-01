@@ -1,5 +1,14 @@
 
 
 .fondoPag{
+  width: 1500px;
   background-image: url(assets/tomoko-uji-eriuKJwcdjI-unsplash.jpg);
+}
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inp{
+  display: grid;
 }

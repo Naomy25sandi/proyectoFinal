@@ -46,6 +46,12 @@
       "name": "vnv",
       "email": "nvnnv",
       "password": "nvnv"
+    },
+    {
+      "id": "538b",
+      "name": "Maria",
+      "email": "m@g.com",
+      "password": "123"
     }
   ],
   "productos": [

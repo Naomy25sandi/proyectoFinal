@@ -36,7 +36,8 @@ const Registro = () => {
     
     const user = data.find((user) => user.email === correo);
     if (user) {
-      alert("INCORRECTO")
+      alert("Usuario ya existe")
+      navigate("/") // lo direcciono a login ya tiene cuenta
     } else {
       if (!nombreTrim || !emailTrim || !passwordTrim)  {
         alert ("Llene todos los campos")
@@ -53,14 +54,20 @@ const Registro = () => {
   }
 
   return (
-    <>
-      <h1>Registro</h1>
-      <input type="text" placeholder="Nombre" ref={nombreRef} onChange={(e) => setUsuario(e.target.value)} />
-      <input type="email" placeholder="Email" ref={emailRef} onChange={(e) => setCorreo(e.target.value)} />
-      < input type="password" placeholder="contraseña" ref={passwordRef} onChange={(e) => setContra(e.target.value)} />
-     
-      <Button titulo={"Registrarse"} type={"button"} className={"btn btn-succes"} evento={validaUsuario} />
-    </>
+    <div>
+     <body className="fondoPag">
+      <div className="container">
+        <div className="inp">
+          <h1>Registro</h1>
+          <input  className="mb-3 rounded" type="text" placeholder="Nombre" ref={nombreRef} onChange={(e) => setUsuario(e.target.value)} />
+          <input  className="mb-3 rounded" type="email" placeholder="Email" ref={emailRef} onChange={(e) => setCorreo(e.target.value)} />
+          <input  className="mb-3 rounded" type="password" placeholder="contraseña" ref={passwordRef} onChange={(e) => setContra(e.target.value)} />
+        
+          <Button titulo={"Registrarse"} type={"button"} className={"btn btn-success"} evento={validaUsuario} />
+        </div>
+      </div>
+      </body>
+    </div>
   )
 }
 export default Registro

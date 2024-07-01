@@ -31,7 +31,7 @@ const InicioSesion = () => {
     return (
         <>
             <body className="fondoPag">
-                <div className="d-flex flex-column justify-content-center align-content-center">
+                <div className="d-flex flex-column justify-content-center align-content-center container">
                     <h1>Iniciar Sesión</h1>
                     <input className="mb-3 rounded" type="email" value={correo} placeholder="Correo" onChange={(e) => setCorreo(e.target.value)} />
                     <input className="mb-3 rounded" type="password" value={contra} placeholder="contraseña" onChange={(e) => setContra(e.target.value)} />
