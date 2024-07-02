@@ -17,7 +17,7 @@ const InicioSesion = () => {
             setData(dataUsuarios)
         }
         obtenerUsuarios()
-    }, [])
+    }, []);
 
     const validaUsuario = () => {
         const user = data.find((user) => user.email === correo && user.password === contra);
@@ -30,16 +30,14 @@ const InicioSesion = () => {
 
     return (
         <>
-            <body className="fondoPag">
-                <div className="d-flex flex-column justify-content-center align-content-center container">
-                    <h1>Iniciar Sesión</h1>
-                    <input className="mb-3 rounded" type="email" value={correo} placeholder="Correo" onChange={(e) => setCorreo(e.target.value)} />
-                    <input className="mb-3 rounded" type="password" value={contra} placeholder="contraseña" onChange={(e) => setContra(e.target.value)} />
+            <div className="d-flex flex-column justify-content-center align-content-center  cont-form">
+                <h1>Inicio de Sesion </h1>
+                <input className="mb-3 rounded" type="email" value={correo} placeholder="Correo" onChange={(e) => setCorreo(e.target.value)} />
+                <input className="mb-3 rounded" type="password" value={contra} placeholder="contraseña" onChange={(e) => setContra(e.target.value)} />
 
-                    <Button titulo={"Iniciar Sesión"} type={"button"} className={"btn btn-success"} evento={validaUsuario} />
-                    <li onClick={() => navigate("/registro")}>No tienes cuenta?</li>
-                </div>
-            </body>
+                <Button titulo={"Iniciar Sesión"} type={"button"} className={"btn btn-success"} evento={validaUsuario} />
+                <li onClick={() => navigate("/registro")}>No tienes cuenta?</li>
+            </div>
         </>
     )
 }

@@ -58,6 +58,18 @@
       "name": "Maria",
       "email": "m@m.com",
       "password": "123"
+    },
+    {
+      "id": "1424",
+      "name": "nancy",
+      "email": "daniel@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "dffc",
+      "name": "pablo",
+      "email": "pablo@gmail.com",
+      "password": "789456"
     }
   ],
   "productos": [

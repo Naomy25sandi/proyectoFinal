@@ -27,7 +27,7 @@ const Registro = () => {
         setData(dataUsuarios)
     }
     obtenerUsuarios()
-}, [])
+}, []);
 // validaciones para los espacios en blanco
   const validaUsuario = async() => {
     const nombreTrim = nombreRef.current.value.trim()
@@ -46,7 +46,6 @@ const Registro = () => {
           name:usuario,
           email:correo,
           password:contra
-          
         })
         navigate("/")
       }
@@ -55,7 +54,7 @@ const Registro = () => {
 
   return (
     <div>
-     <body className="fondoPag">
+     <div className="fondoPag">
       <div className="container">
         <div className="inp">
           <h1>Registro</h1>
@@ -66,7 +65,7 @@ const Registro = () => {
           <Button titulo={"Registrarse"} type={"button"} className={"btn btn-success"} evento={validaUsuario} />
         </div>
       </div>
-      </body>
+      </div>
     </div>
   )
 }
