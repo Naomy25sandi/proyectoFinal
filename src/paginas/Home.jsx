@@ -8,7 +8,7 @@ const Home = () => {
         
         <div>
             <Navbar/>
-            <Card></Card>
+            <Card img={"src/assets/logo.jpeg"} ></Card>
         </div>
     )
 }

@@ -17,17 +17,22 @@ export async function getUsuarios() {
     }
   }
   
-  export async function actualizaDatos(idUsuario) {
+  export async function actualizaDatos(id,nombre,img, descripcion,precio) {
     try {
       let actualizar = {
-        estado: true
+      Id: id,
+      Nombre: nombre,
+      Img: img,
+      Descripcion: descripcion,
+      Precio: precio
+
       }
-      const response = await fetch(`http://localhost:3001`, {
+      const response = await fetch(`http://localhost:3001/products`, {
         method: "PUT",
         headers: {
           "Content-type": "application/json"
         },
-        body: JSON.stringify(task)
+       
       })
       let datos = await response.json()
       console.log(data);
@@ -39,7 +44,7 @@ export async function getUsuarios() {
   
   export async function postData(obj) {
     try {
-      let response = await fetch('http://localhost:3001/users', {
+      let response = await fetch('http://localhost:3001/products', {
         method: "POST",
         headers: {
           "Content-type": "application/json"
@@ -56,7 +61,7 @@ export async function getUsuarios() {
   }
   export async function deleteTask(id) {
     try {
-      const response = await fetch(`http://localhost:3001/api/task/${id}`, {
+      const response = await fetch(`http://localhost:3001/server/db/${id}`, {
         method: "DELETE"
       });
       if (response.ok) {
@@ -71,4 +76,4 @@ export async function getUsuarios() {
     }
   }
 
-export default fetchproducts
+
