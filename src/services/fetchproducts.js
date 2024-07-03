@@ -1,6 +1,6 @@
 import React from 'react'
 
-export async function getUsuarios() {
+export async function getProductos() {
     try {
       let response = await fetch('http://localhost:3001/products', {
         method: "GET",
@@ -59,7 +59,7 @@ export async function getUsuarios() {
     }
   
   }
-  export async function deleteTask(id) {
+  export async function deleteProductos(id) {
     try {
       const response = await fetch(`http://localhost:3001/server/db/${id}`, {
         method: "DELETE"

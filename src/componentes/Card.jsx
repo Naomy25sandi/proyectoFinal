@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import Button from './Button'
 import { useNavigate } from 'react-router-dom'
-import { deleteTask } from '../services/fetchproducts'
+import { deleteProductos, getProductos, postData } from '../services/fetchproducts'
+
 
 
 
@@ -12,7 +13,7 @@ const Card = ({img,descripcion,precio}) => {
   }
 
   const eliminar = async()=>{
-    await deleteTask(id)
+    await deleteProductos(id)
   }
   return (
     <>

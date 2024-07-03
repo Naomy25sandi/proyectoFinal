@@ -9,6 +9,7 @@ const InicioSesion = () => {
     const [correo, setCorreo] = useState()
     const [contra, setContra] = useState()
     const [data, setData] = useState([])
+    const [msg, setMsg]= useState("");
     const navigate = useNavigate()
 
     useEffect(() => {

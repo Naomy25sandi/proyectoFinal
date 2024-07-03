@@ -4,13 +4,14 @@ import Registro from "../paginas/Registro"
 import Login from "../paginas/InicioSesion"
 import '@radix-ui/themes/styles.css';
 import { Theme } from "@radix-ui/themes";
+import RutaPrivada from "./RutaPrivada";
 
 
 const RutasPaginas = () => {
     return (
         <Routes>
             <Route path="/" element={<Login />} />
-            <Route path="/home" element={<Home />} />
+            <Route path="/home" element route={<Home />} /> 
             <Route path="/registro" element={<Registro />} />
         </Routes>
     )
