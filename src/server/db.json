@@ -70,6 +70,12 @@
       "name": "pablo",
       "email": "pablo@gmail.com",
       "password": "789456"
+    },
+    {
+      "id": "53d6",
+      "name": "Jose Miguel",
+      "email": "antoniojose@gmail.com",
+      "password": "1234"
     }
   ],
   "productos": [

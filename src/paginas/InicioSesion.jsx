@@ -1,7 +1,9 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import Button from "../componentes/Button"
 import { getUsuarios } from "../services/fetch"
 import { useNavigate } from "react-router-dom"
+import RutaPrivada from "../routes/RutaPrivada"
+import { AuthContext } from "../routes/AuthProvider"
 
 
 const InicioSesion = () => {
@@ -9,8 +11,10 @@ const InicioSesion = () => {
     const [correo, setCorreo] = useState()
     const [contra, setContra] = useState()
     const [data, setData] = useState([])
-    const [msg, setMsg]= useState("");
+    const [msg, setMsg] = useState("");
     const navigate = useNavigate()
+    const { inicia, cerrar } = useContext(AuthContext);
+
 
     useEffect(() => {
         const obtenerUsuarios = async () => {
@@ -23,6 +27,7 @@ const InicioSesion = () => {
     const validaUsuario = () => {
         const user = data.find((user) => user.email === correo && user.password === contra);
         if (user) {
+            inicia()
             navigate("/home")
         } else {
             alert("INCORRECTO")

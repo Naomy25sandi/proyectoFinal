@@ -5,15 +5,22 @@ import Login from "../paginas/InicioSesion"
 import '@radix-ui/themes/styles.css';
 import { Theme } from "@radix-ui/themes";
 import RutaPrivada from "./RutaPrivada";
+import AuthProvider from "./AuthProvider";
+import InicioSesion from "../paginas/InicioSesion";
 
 
 const RutasPaginas = () => {
     return (
-        <Routes>
-            <Route path="/" element={<Login />} />
-            <Route path="/home" element route={<Home />} /> 
-            <Route path="/registro" element={<Registro />} />
-        </Routes>
+
+        <AuthProvider>
+            <Routes>
+                <Route path="/" element={<InicioSesion />} />
+                <Route path="/Login" element={<InicioSesion />} />
+                <Route path="/home" element={<RutaPrivada route={<Home />} />} />
+                <Route path="/registro" element={<Registro />} />
+            </Routes>
+        </AuthProvider>
+
     )
 }
 export default RutasPaginas

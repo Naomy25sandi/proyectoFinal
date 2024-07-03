@@ -9,7 +9,6 @@ const Home = () => {
         <div>
             <h1>Bienvenido</h1>
             <Navbar/>
-            <Card img={"src/assets/logo.jpeg"} ></Card>
         </div>
     )
 }
