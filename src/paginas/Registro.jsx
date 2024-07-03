@@ -54,7 +54,7 @@ const Registro = () => {
 
   return (
     <div>
-     <div className="d-flex flex-column justify-content-center align-content-center  cont-form">>
+     <div className="d-flex flex-column justify-content-center align-content-center  cont-form">
       <div className="container">
         <div className="inp">
           <h1>Registro</h1>
