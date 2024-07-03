@@ -2,9 +2,13 @@ import React from 'react'
 import Button from './Button'
 import { AuthContext } from '../routes/AuthProvider'
 import { useContext } from 'react'
+import { useNavigate} from 'react-router-dom'
+
+
 const Navbar = () => {
 
   const { inicia, cerrar } = useContext(AuthContext);
+  const navigate = useNavigate()
 
   return (
     <div className='fondoPag'>
@@ -25,7 +29,7 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+                <a className="nav-link active" aria-current="page" onClick={() => navigate("/sobreNosotros")}>
                   Sobre nosotros
                 </a>
               </li>
@@ -35,7 +39,7 @@ const Navbar = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" onClick={() => navigate("/micuenta")}>
                   Mi cuenta
                 </a>
               </li>
