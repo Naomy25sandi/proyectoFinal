@@ -44,8 +44,8 @@ const InicioSesion = () => {
         <>
             <div className="d-flex flex-column justify-content-center align-content-center  cont-form">
                 <h1>Inicio de Sesion </h1>
-                <input className="mb-3 rounded" type="email" value={correo} placeholder="Correo" onChange={(e) => setCorreo(e.target.value)} />
-                <input className="mb-3 rounded" type="password" value={contra} placeholder="contraseña" onChange={(e) => setContra(e.target.value)} />
+                <input className="mb-3 rounded" type="email"  placeholder="Correo" onChange={(e) => setCorreo(e.target.value)} />
+                <input className="mb-3 rounded" type="password"  placeholder="contraseña" onChange={(e) => setContra(e.target.value)} />
                 <Button titulo={"Iniciar Sesión"} type={"button"} className={"btn btn-success"} evento={validaUsuario} />
                 <li onClick={() => navigate("/registro")}>No tienes cuenta?</li>
             </div>

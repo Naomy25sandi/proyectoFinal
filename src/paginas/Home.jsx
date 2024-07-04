@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../componentes/Navbar'
 import Card from '../componentes/Card'
 import SobreNosotros from './SobreNosotros'
+import Contacto from '../componentes/Contacto'
 
 const Home = () => {
     
@@ -10,7 +11,8 @@ const Home = () => {
         <div>
             
             <Navbar/>
-            
+            <Carrusel/>
+          
         </div>
     )
 }

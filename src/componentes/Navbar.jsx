@@ -2,7 +2,7 @@ import React from 'react'
 import Button from './Button'
 import { AuthContext } from '../routes/AuthProvider'
 import { useContext } from 'react'
-import { useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 
 const Navbar = () => {
@@ -39,7 +39,7 @@ const Navbar = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" onClick={() => navigate("/micuenta")}>
+                <a className="nav-link" onClick={() => navigate("/cuenta")}>
                   Mi cuenta
                 </a>
               </li>

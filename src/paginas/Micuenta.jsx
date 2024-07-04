@@ -1,30 +1,30 @@
 import React, { useEffect, useState } from 'react'
 import Button from '../componentes/Button'
-import Home from './Home'
-import { useNavigate,  } from 'react-router-dom'
+import { useNavigate, } from 'react-router-dom'
 import { getProductos } from '../services/fetchproducts'
-import Card from '../componentes/Card'
-
+import ListaProductos from '../componentes/ListaProductos'
+import Navbar from '../componentes/Navbar'
 
 
 
 const Micuenta = () => {
-  const  [productos,setProductos]=useState([])
- 
-  useEffect(()=>{
-    const extraerP = async()=>{
-    const data= await getProductos()
-    setProductos(data)
+  const [productos, setProductos] = useState([])
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    const extraerP = async () => {
+      const data = await getProductos()
+      setProductos(data)
     }
     extraerP();
-  },[])
-  const navigate = useNavigate()
+  }, [])
   return (
     <div>
+      <Navbar/>
       <br /><br />
       <h1>Bienvenido {localStorage.getItem("nombre")}</h1>
-      <Button titulo={"Home"} type={"button"} className={"btn btn-success"} onClick={ navigate("/home")}/>
-      {productos.map(producto=><Card img={producto.img} descripcion={producto.descripcion} precio={producto.precio}/>)}
+      <ListaProductos listado={productos} />
+
     </div>
   )
 }

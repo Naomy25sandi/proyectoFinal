@@ -8,8 +8,8 @@ import RutasPaginas from './routes/Rutaspaginas.jsx'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
- <BrowserRouter>
-     <RutasPaginas/>
-  </BrowserRouter>,
- 
+  <BrowserRouter>
+    <RutasPaginas />
+  </BrowserRouter>
+
 )

@@ -8,7 +8,7 @@ import RutaPrivada from "./RutaPrivada";
 import AuthProvider from "./AuthProvider";
 import InicioSesion from "../paginas/InicioSesion";
 import SobreNosotros from "../paginas/SobreNosotros";
-import Micuenta from "./Micuenta";
+import Micuenta from "../paginas/Micuenta";
 
 
 const RutasPaginas = () => {
@@ -20,8 +20,8 @@ const RutasPaginas = () => {
                 <Route path="/Login" element={<InicioSesion />} />
                 <Route path="/home" element={<RutaPrivada route={<Home />} />} />
                 <Route path="/registro" element={<Registro />} />
-                <Route path="/sobreNosotros" element={<SobreNosotros/>} />
-                <Route path="/micuenta" element={<Micuenta/>} />
+                <Route path="/sobreNosotros" element={<SobreNosotros />} />
+                <Route path="/cuenta" element={<Micuenta />} />
             </Routes>
         </AuthProvider>
 
