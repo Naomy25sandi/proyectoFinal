@@ -34,6 +34,7 @@ const InicioSesion = () => {
            inicia()
             navigate("/home")
             },1000)
+          
         } else {
             alert("INCORRECTO")
         }

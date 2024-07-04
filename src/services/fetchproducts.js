@@ -20,14 +20,13 @@ export async function getProductos() {
   export async function actualizaDatos(id,nombre,img, descripcion,precio) {
     try {
       let actualizar = {
-      Id: id,
       Nombre: nombre,
       Img: img,
       Descripcion: descripcion,
       Precio: precio
 
       }
-      const response = await fetch(`http://localhost:3001/products`, {
+      const response = await fetch(`http://localhost:3001/products/${id}`, {
         method: "PUT",
         headers: {
           "Content-type": "application/json"
@@ -61,7 +60,7 @@ export async function getProductos() {
   }
   export async function deleteProductos(id) {
     try {
-      const response = await fetch(`http://localhost:3001/server/db/${id}`, {
+      const response = await fetch(`http://localhost:3001/products/${id}`, {
         method: "DELETE"
       });
       if (response.ok) {
