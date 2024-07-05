@@ -5,7 +5,7 @@ import { deleteProductos, getProductos, postData } from '../services/fetchproduc
 
 
 
-
+//Este componente define la estructura de cada producto, como el nombre, descripcion y precio
 const Card = ({ img, descripcion, precio, nombre }) => {
   const navigate = useNavigate()
   const actualizarProducto = () => {

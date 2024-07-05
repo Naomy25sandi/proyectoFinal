@@ -81,8 +81,9 @@
   "productos": [
     {
       "id": "1",
-      "nombre": "Rosa",
-      "precio": 1200
+      "descripcion": "Rosa",
+      "precio": 1200,
+      "imagen": ""
     }
   ]
 }

@@ -56,7 +56,6 @@ export async function postData(obj) {
   } catch (error) {
     console.log(error)
   }
-
 }
 export async function deleteProductos(id) {
   try {

@@ -4,6 +4,7 @@ import { useNavigate, } from 'react-router-dom'
 import { getProductos } from '../services/fetchproducts'
 import ListaProductos from '../componentes/ListaProductos'
 import Navbar from '../componentes/Navbar'
+import Form from '../componentes/Form'
 
 
 
@@ -17,12 +18,16 @@ const Micuenta = () => {
       setProductos(data)
     }
     extraerP();
-  }, [])
+  }, [productos])
+
+  //post
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <br /><br />
       <h1>Bienvenido {localStorage.getItem("nombre")}</h1>
+      <Form />
+
       <ListaProductos listado={productos} />
 
     </div>

@@ -35,7 +35,7 @@ const Navbar = () => {
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
-                  Arreglo florales
+                  Arreglo de cositas feas
                 </a>
               </li>
               <li className="nav-item">

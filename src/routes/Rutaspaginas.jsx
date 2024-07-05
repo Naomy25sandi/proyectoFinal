@@ -1,9 +1,6 @@
 import { Route, Routes } from "react-router-dom"
 import Home from "../paginas/Home"
 import Registro from "../paginas/Registro"
-import Login from "../paginas/InicioSesion"
-import '@radix-ui/themes/styles.css';
-import { Theme } from "@radix-ui/themes";
 import RutaPrivada from "./RutaPrivada";
 import AuthProvider from "./AuthProvider";
 import InicioSesion from "../paginas/InicioSesion";

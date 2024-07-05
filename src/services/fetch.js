@@ -16,7 +16,7 @@ export async function getUsuarios() {
   }
 }
 
-export async function actualizaDatos(idUsuario) {
+export async function actualizaDatos(id) {
   try {
     let actualizar = {
       estado: true
