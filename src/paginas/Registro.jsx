@@ -15,6 +15,7 @@ const Registro = () => {
   const passwordRef = useRef("")
   const [data, setData] = useState([])
   const navigate = useNavigate()
+  const [msg, setMsg] = useState("");
 // llamo la funcion de posdata 
   const darDatos = async (obj) => {
     const datos = await postData(obj)
@@ -47,7 +48,9 @@ const Registro = () => {
           email:correo,
           password:contra
         })
+        
         navigate("/")
+        setMsg("Usuario registrado existosamente!")
       }
     }
   }

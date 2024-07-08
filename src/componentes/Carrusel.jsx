@@ -1,24 +1,37 @@
-import React from 'react'
+import Carousel from 'react-bootstrap/Carousel'
 
 const Carrusel = () => {
   return (
-    <div id="carouselExample" class="carousel slide">
-  <div class="carousel-inner">
-    <h2>Eventos realizados</h2>
-    <div class="carousel-item active">
-      <img src="src\assets\bouquet.jpeg" className="d-block w-100"  alt="..."/>
-    </div>
-    <div class="carousel-item">
-      <img src="src\assets\centrodemesa.jpeg" className="d-block w-100"   alt="..."/>
-    </div>
-    <div class="carousel-item">
-      <img src="src\assets\centrodemesa2.jpeg" className="d-block w-100" alt="..."/>
-    </div>
-  </div>
- 
-</div>
-  )
+    <Carousel>
+    <Carousel.Item>
+      <ExampleCarouselImage text="First slide" />
+      <Carousel.Caption>
+        <h3>First slide label</h3>
+        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      </Carousel.Caption>
+    </Carousel.Item>
+    <Carousel.Item>
+      <ExampleCarouselImage text="Second slide" />
+      <Carousel.Caption>
+        <h3>Second slide label</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </Carousel.Caption>
+    </Carousel.Item>
+    <Carousel.Item>
+      <ExampleCarouselImage text="Third slide" />
+      <Carousel.Caption>
+        <h3>Third slide label</h3>
+        <p>
+          Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+        </p>
+      </Carousel.Caption>
+    </Carousel.Item>
+  </Carousel>
+);
 }
+
+  
+
 
 export default Carrusel
 

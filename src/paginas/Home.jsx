@@ -3,6 +3,7 @@ import Navbar from '../componentes/Navbar'
 import Card from '../componentes/Card'
 import SobreNosotros from './SobreNosotros'
 import Contacto from '../componentes/Contacto'
+import Carrusel from '../componentes/Carrusel'
 
 const Home = () => {
     
@@ -11,7 +12,7 @@ const Home = () => {
         <div>
             
             <Navbar/>
-            
+            <Carrusel/>
           
         </div>
     )

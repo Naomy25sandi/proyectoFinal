@@ -49,13 +49,13 @@ const Form = () => {
                 </div>
                 <div className="form-group row">
                     <label htmlFor="inputPassword" className="col-sm-2 col-form-label">
-                        ....
+                        Precio
                     </label>
                     <div className="col-sm-10">
                         <input
                             type="text"
                             className="form-control"
-                            placeholder="descripcion"
+                            placeholder="Precio"
                             onChange={(e) => setPrecio(e.target.value)}
                         />
                     </div>
