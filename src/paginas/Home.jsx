@@ -6,13 +6,15 @@ import Contacto from '../componentes/Contacto'
 import DarkVariantExample from '../componentes/DarkVariantExample'
 
 
+
+
 const Home = () => {
     
     return (
         <main className='cont-home'>
              <Navbar/>
             <DarkVariantExample/> 
-          
+           
         </main>
     )
 }
