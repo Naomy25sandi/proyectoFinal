@@ -22,8 +22,8 @@ const Micuenta = () => {
 
   //post
   return (
-    <div>
-      <Navbar />
+    <div className='cont-home'>
+      <Navbar/>
       <br /><br />
       <h1>Bienvenido {localStorage.getItem("nombre")}</h1>
       <Form />

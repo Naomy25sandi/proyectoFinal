@@ -8,8 +8,9 @@ import { deleteProductos, getProductos, postData } from '../services/fetchproduc
 //Este componente define la estructura de cada producto, como el nombre, descripcion y precio
 const Card = ({ img, descripcion, precio, nombre }) => {
   const navigate = useNavigate()
-  const actualizarProducto = () => {
-    navigate("/registro")
+
+  const actualizarProducto = async() => {
+   await actualizarDatos(id,nombre,img,descripcion,precio)
   }
 
   const eliminar = async () => {
@@ -37,8 +38,8 @@ const Card = ({ img, descripcion, precio, nombre }) => {
                 <text as="div" size={2} color="gray">
                   {precio}
                 </text>
-                <Button titulo={"Actualizar imagen"} type={"button"} evento={actualizarProducto} />
-                <Button titulo={"Eliminar imagen"} type={"button"} evento={eliminar} />
+                <Button class="btn btn-outline-light" titulo={"Actualizar imagen"} type={"button"} evento={actualizarProducto} />
+                <Button class="btn btn-outline-light" titulo={"Eliminar imagen"} type={"button"} evento={eliminar} />
               </box>
             </avatar>
           </flex>

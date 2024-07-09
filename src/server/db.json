@@ -88,6 +88,12 @@
       "name": "Fer",
       "email": "f@gmail.com",
       "password": "456"
+    },
+    {
+      "id": "83a4",
+      "name": "j",
+      "email": "j@gmail.com",
+      "password": "567"
     }
   ],
   "productos": [

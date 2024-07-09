@@ -34,9 +34,9 @@ function DarkVariantExample() {
                     alt="Centro de mesa"
                 />
                 <Carousel.Caption>
-                    <h5>Third slide label</h5>
+                    <h5>Centro de mesa alto</h5>
                     <p>
-                        Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                       Tonalidades pasteles
                     </p>
                 </Carousel.Caption>
 

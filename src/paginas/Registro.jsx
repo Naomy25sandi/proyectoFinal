@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from "react"
 import Button from "../componentes/Button"
-import { postData, getUsuarios } from "../services/fetch"
+import { GetData , postData } from "../services/ambos"
 import { useNavigate } from "react-router-dom"
 
 
@@ -17,14 +17,16 @@ const Registro = () => {
   const navigate = useNavigate()
   const [msg, setMsg] = useState("");
 // llamo la funcion de posdata 
-  const darDatos = async (obj) => {
-    const datos = await postData(obj)
+ 
+const darData = async (obj) => {
+    const datos = await postData(obj, "users")
     setData(datos)
   }
 // llamo la funcion de get data con el usseffect
   useEffect(() => {
     const obtenerUsuarios = async () => {
-        const dataUsuarios = await getUsuarios()
+        const dataUsuarios = await GetData("users")
+        console.log(dataUsuarios)
         setData(dataUsuarios)
     }
     obtenerUsuarios()
@@ -43,7 +45,7 @@ const Registro = () => {
       if (!nombreTrim || !emailTrim || !passwordTrim)  {
         alert ("Llene todos los campos")
       }else{
-        darDatos({
+        darData({
           name:usuario,
           email:correo,
           password:contra
