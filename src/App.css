@@ -41,39 +41,12 @@
 
 
 
-
-
-.header .nav-links li {
-  display: inline-block;
-  padding: 0 20px;
+.cont-home{
+  background-image: url(assets/tomoko-uji-eriuKJwcdjI-unsplash.jpg);
+  
 }
-
-.header .nav-links li:hover {
-  transform: scale(1.1);
-}
-
-.header .nav-links a {
-  font-size: 700;
-  color: antiquewhite;
-  text-decoration: none;
-}
-
-.header .nav-links li a:hover {
-  color: red;
-}
-
-.header .btn button {
-  font-weight: 700;
-  color: blueviolet;
-  padding: 9px 25px;
-  background: #eceff1;
-  border: darkviolet;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-}
-
-.header .btn button:hover {
-  background-color: aliceblue;
-  transform: scale(1.1);
+.Carousel{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

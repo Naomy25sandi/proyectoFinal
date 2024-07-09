@@ -3,18 +3,17 @@ import Navbar from '../componentes/Navbar'
 import Card from '../componentes/Card'
 import SobreNosotros from './SobreNosotros'
 import Contacto from '../componentes/Contacto'
-import Carrusel from '../componentes/Carrusel'
+import DarkVariantExample from '../componentes/DarkVariantExample'
+
 
 const Home = () => {
     
     return (
-        
-        <div>
-            
-            <Navbar/>
-           
+        <main className='cont-home'>
+             <Navbar/>
+            <DarkVariantExample/> 
           
-        </div>
+        </main>
     )
 }
 
