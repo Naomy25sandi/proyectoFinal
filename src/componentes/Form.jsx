@@ -5,7 +5,6 @@ import { postData } from "../services/ambos"
 
 //Permite subir los datos hacia la API
 const Form = () => {
-
     const [descripcion, setDescripcion] = useState("")
     const [precio, setPrecio] = useState("")
     const [imagen, setImagen] = useState("")

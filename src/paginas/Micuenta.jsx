@@ -15,15 +15,15 @@ const Micuenta = () => {
   const [descripcion, setDescripcion] = useState("")
   const [precio, setPrecio] = useState("")
   const [imagen, setImagen] = useState("")
+  const [recarga, setRecarga] = useState(false)
 
-  //post
   useEffect(() => {
     const extraerP = async () => {
       const data = await GetData("productos")
       setProductos(data)
     }
     extraerP();
-  }, [productos])
+  }, [recarga])
 
   const handleImage = (e) => {
     const file = document.getElementById("upload-file").files[0];
@@ -36,6 +36,10 @@ const Micuenta = () => {
     }
   }
 
+  const recargaPag = () => {
+    setRecarga(!recarga)
+  }
+
   const update = async (id) => {
     const datos = {
       descripcion: descripcion,
@@ -43,6 +47,7 @@ const Micuenta = () => {
       imagen: imagen
     }
     await actualizaDatos(id, datos, "productos")
+    recargaPag()
   }
 
   return (

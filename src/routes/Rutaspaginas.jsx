@@ -6,6 +6,7 @@ import AuthProvider from "./AuthProvider";
 import InicioSesion from "../paginas/InicioSesion";
 import SobreNosotros from "../paginas/SobreNosotros";
 import Micuenta from "../paginas/Micuenta";
+import Arreglosflorales from "../paginas/Arreglosflorales";
 
 
 const RutasPaginas = () => {
@@ -19,7 +20,8 @@ const RutasPaginas = () => {
                 <Route path="/registro" element={<Registro />} />
                 <Route path="/sobreNosotros" element={<SobreNosotros />} />
                 <Route path="/cuenta" element={<Micuenta />} />
-            </Routes>
+                <Route path="/arreglosflorales" element={<Arreglosflorales />} />
+                </Routes>
         </AuthProvider>
 
     )
