@@ -41,9 +41,9 @@ const postData = async (obj, endpoint) => {
 export { postData }
 
 
-export async function actualizaDatos (obj, endpoint) {
+export async function actualizaDatos (id,obj, endpoint) {
     try {
-        const response = await fetch(`http://localhost:3001/${endpoint}`+ "/" + obj.id,{
+        const response = await fetch(`http://localhost:3001/${endpoint}`+ "/" + id,{
             method: "PUT",
             headers: {
                 "Content-type": "application/json"

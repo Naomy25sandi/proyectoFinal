@@ -5,11 +5,8 @@ import { actualizaDatos, deleteProductos } from '../services/ambos'
 
 
 //Este componente define la estructura de cada producto, como el nombre, descripcion y precio
-const Card = ({ id, descripcion1, precio1, imagen1, btnAgg, btnEditar,btnEliminar }) => {
-  const [descripcion, setDescripcion] = useState(descripcion1)
-  const [precio, setPrecio] = useState(precio1)
-  const [imagen, setImagen] = useState(imagen1)
-  const navigate = useNavigate()
+const Card = ({descripcion1, precio1, imagen1, btnAgg, btnEditar,btnEliminar }) => {
+
 
   // se llama actualizar producto dentro del useEffect pero se crea la funcion fuera del use effect para poderla usarla en el boton boton.
 
