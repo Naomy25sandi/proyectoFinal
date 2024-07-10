@@ -59,9 +59,9 @@ export async function actualizaDatos (obj, endpoint) {
 }
 
 
-export async function deleteProductos(id) {
+export async function deleteProductos(id, endpoint) {
     try {
-        const response = await fetch(`http://localhost:3001/productos` + "/" + id, {
+        const response = await fetch(`http://localhost:3001/${endpoint}` + "/" + id, {
             method: "DELETE"
         });
         if (response.ok) {

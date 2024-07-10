@@ -1,75 +1,45 @@
 import React, { useEffect, useState } from 'react'
 import Button from './Button'
 import { useNavigate } from 'react-router-dom'
-import { deleteProductos, getProductos, postData, } from '../services/fetchproducts'
-import { actualizaDatos } from '../services/ambos'
+import { actualizaDatos, deleteProductos } from '../services/ambos'
 
 
 //Este componente define la estructura de cada producto, como el nombre, descripcion y precio
-const Card = ({ id, descripcion1, precio1, imagen1 }) => {
+const Card = ({ id, descripcion1, precio1, imagen1, btnAgg, btnEditar,btnEliminar }) => {
   const [descripcion, setDescripcion] = useState(descripcion1)
   const [precio, setPrecio] = useState(precio1)
   const [imagen, setImagen] = useState(imagen1)
   const navigate = useNavigate()
-  //useeffect para que no se encicle crear un hook para setear los valores, valores que obtengo por los input.
-  //useEffect(() => {
 
-  //actualizarProducto()
-  //}, []);
-  const actualizarProducto = async () => {
-    console.log("aqui vamos", descripcion, precio)
-    const obj = {
-      id: id,
-      descripcion: descripcion,
-      precio: precio,
-      imagen: imagen
-    }
-    await actualizaDatos(obj, 'productos')
-  }
+  // se llama actualizar producto dentro del useEffect pero se crea la funcion fuera del use effect para poderla usarla en el boton boton.
 
 
-  const eliminar = async () => {
-    await deleteProductos(id)
-  }
-  const handleImage = (e) => {
-    const file = document.getElementById("upload-file").files[0];
-    const reader = new FileReader();
-    if (file) {
-      reader.onload = function (e) {
-        setImagen(e.target.result);
-      };
-      reader.readAsDataURL(file);
-    }
-  }
+
+
+
   return (
     <>
       <box maxwidth="240px">
-        <h2>Hola</h2>
         <card>
           <flex gap={3} align="center">
             <avatar
               size={3}
-              src={imagen}
+              src={imagen1}
               radius="full"
               fallback="T"
             >
               <box>
-                <img src={imagen} height={200} />
-
+                <img src={imagen1} height={200} />
 
                 <text as="div" size={2} color="gray">
-                  {descripcion}
-                </text>
+                  Descripcion: {descripcion1}
+                </text> <br />
                 <text as="div" size={2} color="gray">
-                  {precio}
+                  Precio {precio1}
                 </text>
-                <div>
-                  <input className="mb-3 rounded" type="text" placeholder="Descripcion" value={descripcion} onChange={(e) => setDescripcion(e.target.value)} />
-                  <input className="mb-3 rounded" type="text" placeholder="Precio" value={precio} onChange={(e) => setPrecio(e.target.value)} />
-                  <input className='file' id="upload-file" accept="image/x-png,image/gif,image/jpeg" type="file" onChange={handleImage} />
-                </div>
-                <Button class="btn btn-outline-light" titulo={"Actualizar imagen"} type={"button"} evento={actualizarProducto} />
-                {/* <Button class="btn btn-outline-light" titulo={"Eliminar imagen"} type={"button"} evento={eliminar} /> */}
+                <Button class="btn btn-outline-light" titulo={"Agregar producto"} type={"button"} evento={btnAgg} />
+                <Button class="btn btn-outline-light" titulo={"Actualizar producto"} type={"button"} evento={btnEditar} />
+                <Button class="btn btn-outline-light" titulo={"Eliminar producto"} type={"button"}evento={btnEliminar} />
               </box>
             </avatar>
           </flex>
