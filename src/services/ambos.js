@@ -41,9 +41,9 @@ const postData = async (obj, endpoint) => {
 export { postData }
 
 
-export async function actualizaDatos(id, obj) {
+export async function actualizaDatos (obj, endpoint) {
     try {
-        const response = await fetch(`http://localhost:3001/${endpoint}` + "/" + id, {
+        const response = await fetch(`http://localhost:3001/${endpoint}`+ "/" + obj.id,{
             method: "PUT",
             headers: {
                 "Content-type": "application/json"
@@ -59,9 +59,9 @@ export async function actualizaDatos(id, obj) {
 }
 
 
-export async function deleteProductos(endpoint,id) {
+export async function deleteProductos(id) {
     try {
-        const response = await fetch(`http://localhost:3001/${endpoint}` + "/" + id, {
+        const response = await fetch(`http://localhost:3001/productos` + "/" + id, {
             method: "DELETE"
         });
         if (response.ok) {
