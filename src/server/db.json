@@ -94,6 +94,12 @@
       "name": "j",
       "email": "j@gmail.com",
       "password": "567"
+    },
+    {
+      "id": "e1ef",
+      "name": "mariano",
+      "email": "mn@gmail.com",
+      "password": "456"
     }
   ],
   "productos": [

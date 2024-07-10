@@ -1,9 +1,10 @@
 import { useContext, useEffect, useState } from "react"
 import Button from "../componentes/Button"
-import { getUsuarios } from "../services/fetch"
+
 import { useNavigate } from "react-router-dom"
 import RutaPrivada from "../routes/RutaPrivada"
 import { AuthContext } from "../routes/AuthProvider"
+import { GetData } from "../services/ambos"
 
 
 const InicioSesion = () => {
@@ -18,7 +19,7 @@ const InicioSesion = () => {
 
     useEffect(() => {
         const obtenerUsuarios = async () => {
-            const dataUsuarios = await getUsuarios()
+            const dataUsuarios = await GetData("users")// revisar si esta correcto
             setData(dataUsuarios)
         }
         obtenerUsuarios()
