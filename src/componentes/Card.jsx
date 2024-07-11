@@ -13,8 +13,8 @@ const Card = ({ descripcion1, precio1, imagen1, btnAgg, btnEditar, btnEliminar }
         <h5 className="card-title">Descripción: {descripcion1}</h5>
         <p className="card-text">Precio: {precio1}</p>
         
-        <Button className="btn btn-outline-light" titulo="Actualizar producto" type="button" evento={btnEditar} />
-        <Button className="btn btn-outline-light" titulo="Eliminar producto" type="button" evento={btnEliminar} />
+        <Button className="btn btn-success" titulo="Actualizar producto" type="button" evento={btnEditar} />
+        <Button className="btn btn-success" titulo="Eliminar producto" type="button" evento={btnEliminar} />
       </div>
     </div>
   );
