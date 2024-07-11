@@ -4,6 +4,7 @@ import Card from '../componentes/Card'
 import SobreNosotros from './SobreNosotros'
 import Contacto from '../componentes/Contacto'
 import DarkVariantExample from '../componentes/DarkVariantExample'
+import PiePag from '../componentes/PiePag'
 
 
 
@@ -14,7 +15,7 @@ const Home = () => {
         <main className='cont-home'>
              <Navbar/>
             <DarkVariantExample/> 
-           
+            < PiePag/>
         </main>
     )
 }

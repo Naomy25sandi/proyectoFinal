@@ -6,6 +6,7 @@ import ListaProductos from '../componentes/ListaProductos'
 import Navbar from '../componentes/Navbar'
 import Form from '../componentes/Form'
 import { actualizaDatos, GetData } from '../services/ambos'
+import PiePag from '../componentes/PiePag'
 
 
 
@@ -67,8 +68,9 @@ const Micuenta = () => {
       <input placeholder='Descipcion' onChange={(e) => setDescripcion(e.target.value)} />
       <input placeholder='Precio' onChange={(e) => setPrecio(e.target.value)} />
       <input className='file' id="upload-file" accept="image/x-png,image/gif,image/jpeg" type="file" onChange={handleImage} />
-      
+      <PiePag/>
     </div>
+
   )
 }
 
