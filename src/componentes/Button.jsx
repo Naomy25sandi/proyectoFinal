@@ -1,3 +1,5 @@
+// creacion del componente boton dandole props reutilizables para llamarlas y darle la funcionalidad que necesito
+
 const Button = ({ titulo, type, evento, className = "btn btn-primary" }) => {
 
     return (

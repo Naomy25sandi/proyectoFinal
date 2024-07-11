@@ -8,7 +8,7 @@ const Form = () => {
     const [descripcion, setDescripcion] = useState("")
     const [precio, setPrecio] = useState("")
     const [imagen, setImagen] = useState("")
-
+// funcion para mostrar la imagen
     const handleImage = (e) => {
         const file = document.getElementById("upload-file").files[0];
         const reader = new FileReader();
@@ -20,7 +20,7 @@ const Form = () => {
         }
     }
 
-
+   // post
     const traerP = async () => {
         await postData({
             descripcion: descripcion,

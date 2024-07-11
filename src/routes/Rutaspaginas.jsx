@@ -8,10 +8,10 @@ import SobreNosotros from "../paginas/SobreNosotros";
 import Micuenta from "../paginas/Micuenta";
 import Arreglosflorales from "../paginas/Arreglosflorales";
 
-
+// creo rutas paginas
 const RutasPaginas = () => {
     return (
-
+        //  encapsulo mis rutas con el AuthProvider y asi puedo encapsular la ruta que quiero hacer privada
         <AuthProvider>
             <Routes>
                 <Route path="/" element={<InicioSesion />} />

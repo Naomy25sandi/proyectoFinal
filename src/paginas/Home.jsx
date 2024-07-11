@@ -1,11 +1,8 @@
 import React from 'react'
 import Navbar from '../componentes/Navbar'
-import Card from '../componentes/Card'
-import SobreNosotros from './SobreNosotros'
-import Contacto from '../componentes/Contacto'
 import DarkVariantExample from '../componentes/DarkVariantExample'
 import PiePag from '../componentes/PiePag'
-
+// importo los componentes necesarios para mi pagina principal
 
 
 
@@ -15,7 +12,7 @@ const Home = () => {
         <main className='cont-home'>
              <Navbar/>
             <DarkVariantExample/> 
-            < PiePag/>
+         < PiePag/>
         </main>
     )
 }

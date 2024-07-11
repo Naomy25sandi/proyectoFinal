@@ -4,7 +4,7 @@ import { AuthContext } from '../routes/AuthProvider'
 import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-
+// componente Navbar
 const Navbar = () => {
 
   const { inicia, cerrar } = useContext(AuthContext);
