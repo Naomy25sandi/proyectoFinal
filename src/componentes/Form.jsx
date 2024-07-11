@@ -27,6 +27,7 @@ const Form = () => {
             precio: precio,
             imagen: imagen
         }, 'productos')
+        window.location.reload();
     }
 
     return (

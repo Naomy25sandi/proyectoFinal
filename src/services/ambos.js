@@ -41,23 +41,27 @@ const postData = async (obj, endpoint) => {
 export { postData }
 
 
-export async function actualizaDatos (id,obj, endpoint) {
+export const actualizaDatos = async (id, datos, endpoint) => {
     try {
-        const response = await fetch(`http://localhost:3001/${endpoint}`+ "/" + id,{
-            method: "PUT",
-            headers: {
-                "Content-type": "application/json"
-            },
-            body: JSON.stringify(obj)
-
-        })
-        let datos = await response.json()
-        console.log(datos);
+      const response = await fetch(`http://localhost:3001/${endpoint}/${id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(datos),
+      });
+  
+      if (!response.ok) {
+        throw new Error('Error al actualizar el producto');
+      }
+  
+      return await response.json();
     } catch (error) {
-        console.error(error);
+      console.error('Error en la función actualizaDatos:', error);
+      throw error; // Lanza el error para manejarlo en la función que llama a actualizaDatos
     }
-}
-
+  };
+  
 
 export async function deleteProductos(id, endpoint) {
     try {

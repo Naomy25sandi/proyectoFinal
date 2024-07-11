@@ -1,11 +1,10 @@
 import { useContext, useEffect, useState } from "react"
 import Button from "../componentes/Button"
-
 import { useNavigate } from "react-router-dom"
 import RutaPrivada from "../routes/RutaPrivada"
 import { AuthContext } from "../routes/AuthProvider"
 import { GetData } from "../services/ambos"
-
+import Swal from "sweetalert2";
 
 const InicioSesion = () => {
     const [usuario, setUsuario] = useState()
@@ -37,7 +36,10 @@ const InicioSesion = () => {
             },1000)
           
         } else {
-            alert("INCORRECTO")
+            Swal.fire({
+                icon:"error",
+                text: "Usuario o contraseña incorrecto"
+        })
         }
     }
 
@@ -50,7 +52,9 @@ const InicioSesion = () => {
                 <Button titulo={"Iniciar Sesión"} type={"button"} className={"btn btn-success"} evento={validaUsuario} />
                 <li onClick={() => navigate("/registro")}>No tienes cuenta?</li>
             </div>
+              <div className="contiene-p">
                 <p>{msg}</p>
+                </div>
         </>
     )
 }

@@ -14,7 +14,7 @@ const Navbar = () => {
     <div className='fondoPag'>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
-          <img src="src\assets\logo.jpeg" className="navbar-brand" height="{100}/" />
+          <img src="src\assets\logo.jpeg" className="navbar-brand" onClick={() => navigate("/home")} height="{100}/" />
           <button
             className="navbar-toggler"
             type="button"
@@ -34,7 +34,7 @@ const Navbar = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" onClick={()=> navigate("/arreglosflorales")}>
+                <a className="nav-link" onClick={() => navigate("/arreglosflorales")}>
                   Arreglos florales
                 </a>
               </li>

@@ -7,6 +7,7 @@ const ListaProductos = ({ listado, btnAgg, btnEditar, btnEliminar }) => {
 
     const eliminar = async (id) => {
         await deleteProductos(id, 'productos')
+        window.location.reload();
     }
     return (
         <>

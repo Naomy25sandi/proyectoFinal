@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react'
 import Button from '../componentes/Button'
 import { useNavigate, } from 'react-router-dom'
@@ -42,11 +43,12 @@ const Micuenta = () => {
 
   const update = async (id) => {
     const datos = {
+     
       descripcion: descripcion,
       precio: precio,
       imagen: imagen
     }
-    await actualizaDatos(id, datos, "productos")
+    await actualizaDatos(id,datos,"productos")
     recargaPag()
   }
 
@@ -57,12 +59,15 @@ const Micuenta = () => {
       <h1>Bienvenido {localStorage.getItem("nombre")}</h1>
 
       <ListaProductos listado={productos} btnEditar={update} />
+      <br/><br/>
       <Form texto={"Agregar producto"} />
-
+      <br/><br/>
       {/*FORMULARIO DE EDITAR  */}
+      <h1>Este es el formulario que se debe de llenar antes de actualizar datos de los productos </h1>
       <input placeholder='Descipcion' onChange={(e) => setDescripcion(e.target.value)} />
       <input placeholder='Precio' onChange={(e) => setPrecio(e.target.value)} />
       <input className='file' id="upload-file" accept="image/x-png,image/gif,image/jpeg" type="file" onChange={handleImage} />
+      
     </div>
   )
 }
