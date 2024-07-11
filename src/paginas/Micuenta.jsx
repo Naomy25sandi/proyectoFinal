@@ -12,21 +12,23 @@ import PiePag from '../componentes/PiePag'
 
 
 const Micuenta = () => {
-  const [productos, setProductos] = useState([])
-  const navigate = useNavigate()
-  const [descripcion, setDescripcion] = useState("")
-  const [precio, setPrecio] = useState("")
-  const [imagen, setImagen] = useState("")
-  const [recarga, setRecarga] = useState(false)
-
+  const [productos, setProductos] = useState([])//estado que almacena la lista de productos
+  const [descripcion, setDescripcion] = useState("")// estado que almacena la descripcion de mis productos
+  const [precio, setPrecio] = useState("")// estado que almacena el precio de los productos
+  const [imagen, setImagen] = useState("")// estado que almacena la imagen de los productos
+  const navigate = useNavigate()// hook para ayudar en la navegacion
+  const [recarga, setRecarga] = useState(false)// estado que recarga la pagina dandole un valor en falso
+   
+  // se usa para traer los productos del API usando el Get y la funcion asyncronica para ejecutar una vez que se recarga 
   useEffect(() => {
     const extraerP = async () => {
       const data = await GetData("productos")
-      setProductos(data)
+      setProductos(data)// Actualizar el estado de productos con los datos obtenidos
     }
-    extraerP();
-  }, [recarga])
+    extraerP(); // se llama la funcion
+  }, [recarga]) //funcion de recarga
 
+  // Función para manejar la carga de imágenes
   const handleImage = (e) => {
     const file = document.getElementById("upload-file").files[0];
     const reader = new FileReader();
@@ -42,6 +44,7 @@ const Micuenta = () => {
     setRecarga(!recarga)
   }
 
+   // Función para actualizar datos de un producto
   const update = async (id) => {
     const datos = {
      
@@ -49,8 +52,8 @@ const Micuenta = () => {
       precio: precio,
       imagen: imagen
     }
-    await actualizaDatos(id,datos,"productos")
-    recargaPag()
+    await actualizaDatos(id,datos,"productos")// Llama a una función asincrónica para actualizar datos
+    recargaPag()// Llama a recargaPag para actualizar la lista de productos después de la actualización
   }
 
   return (
